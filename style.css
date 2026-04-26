@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lobster", sans-serif;
+    background: url(imagem/fundo.png) no-repeat center bottom / cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100dvh;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 25px;
+
+}
+
+.container h1 {
+    font-size: 56px;
+    color: #fff5ee;
+    text-shadow: 0 0 15px rgba(255, 120, 0, 0.4);
+}
+
+/* BOTÕES */
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+
+    transition: all .3s ease;
+}
+
+/* 🔥 BOTÃO SIM (quente e vivo) */
+.sim {
+    background: linear-gradient(135deg, #ff3c00, #ff7a00, #ffb347)!important;
+    color: white;
+
+    box-shadow:
+        0 4px 15px rgba(255, 90, 0, 0.4),
+        inset 0 0 8px rgba(255, 255, 255, 0.2);
+
+    background-size: 200% 200%;
+    animation: fogo 3s ease infinite;
+}
+
+.sim:hover {
+    transform: scale(1.08);
+    box-shadow:
+        0 0 25px rgba(255, 120, 0, 0.9),
+        0 0 40px rgba(255, 80, 0, 0.6)!important;
+}
+
+/* ❄️ BOTÃO NÃO (contraste frio/sutil) */
+.nao {
+    background: rgba(255, 255, 255, 0.08)!important;
+    color: #ffe5e0;
+    border: 1px solid rgba(255, 80, 0, 0.5)!important;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3)!important;
+}
+
+.nao:hover {
+    background: rgba(255, 80, 0, 0.15)!important;
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(255, 80, 0, 0.4)!important;
+}
+
+/* CLICK */
+.botao:active {
+    transform: scale(.95);
+}
+
+/* 🔥 ANIMAÇÃO DE CALOR (mais suave e elegante) */
+@keyframes fogo {
+    0% {
+        background-position: 0% 50%;
+        box-shadow: 0 4px 15px rgba(255, 90, 0, 0.4);
+    }
+
+    50% {
+        background-position: 100% 50%;
+        box-shadow: 0 0 30px rgba(255, 120, 0, 0.8);
+    }
+
+    100% {
+        background-position: 0% 50%;
+        box-shadow: 0 4px 15px rgba(255, 90, 0, 0.4);
+    }
+}
